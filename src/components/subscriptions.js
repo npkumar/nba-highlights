@@ -5,7 +5,9 @@ class Subscriptions extends Component {
     super(props);
 
     this.state = {
-      email: ''
+      email: '',
+      error: false,
+      success: false
     }
   }
 
@@ -29,9 +31,19 @@ class Subscriptions extends Component {
     .then(res => res.json())
     .then(() => {
       this.setState({
-        email: ''
+        email: '',
+        success: true
       })
     })
+  }
+
+  clearMessages = () => {
+    setTimeout(function() {
+      this.setState({
+        error: false,
+        success: false
+      });
+    }.bind(this), 3000); // funky, just use an arrow func!
   }
 
   handleSubmit = event => {
@@ -44,8 +56,13 @@ class Subscriptions extends Component {
     if (regex.test(email)) {
       this.saveSubscription(email);
     } else {
-
+      this.setState({
+        error: true
+      });
     }
+
+    // clear messages
+    this.clearMessages();
   }
 
   render() {
@@ -60,6 +77,8 @@ class Subscriptions extends Component {
                 value={this.state.email}
                 onChange={this.onChangeInput}
                 />
+                <div className={this.state.error ? "error show": "error"}>Check your email</div>
+                <div className={this.state.success ? "success show": "success"}>Subscribed!</div>
             </form>
             <small>
             It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout
