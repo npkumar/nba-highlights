@@ -117,6 +117,10 @@
     {
       "email": "fernando@gmail.com",
       "id": 8
+    },
+    {
+      "email": "foo@foo.com",
+      "id": 9
     }
   ],
   "teams": [
