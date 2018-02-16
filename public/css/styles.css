@@ -222,3 +222,32 @@ footer {
   opacity: 0;
   transition: all 500ms ease-in-out;
 }
+
+/**
+* POLL
+*/
+
+.home-poll {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.home-poll .poll-container {
+  display: flex;
+}
+
+.home-poll .poll-container .poll-item {
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.home-poll .poll-container .poll-item img {
+  width: 80%;
+}
+
+.home-poll .poll-container .poll-item div {
+  font-size: 18px;
+  font-family: 'Fjalla One';
+}
+
