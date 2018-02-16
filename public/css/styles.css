@@ -282,3 +282,48 @@ footer {
   opacity: 1;
   transition: opacity 500ms ease-in;
 }
+
+/**
+* Teams
+*/
+
+.teams-component {
+  min-height: 700px;
+}
+
+.teams-input {
+  text-align: center;
+  padding: 20px 0;
+  background: #e6e6e6;
+}
+
+.teams-input input {
+  font-family: 'Roboto';
+  border-radius: 20px;
+  border: 1px solid lightblue;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.teams-input input:focus {
+  outline: none;
+}
+
+.teams-container span{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.teams-container .team-item {
+  width: 25%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.teams-container .team-item img {
+  width: 100%;
+}
