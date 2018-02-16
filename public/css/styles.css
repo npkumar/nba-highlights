@@ -251,3 +251,34 @@ footer {
   font-family: 'Fjalla One';
 }
 
+
+/**
+* Fade animation
+*/
+
+.fade-appear {
+  opacity: 0.01;
+}
+
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-leave {
+  opacity: 0.01;
+}
+
+.fade-leave.fade-leave-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
